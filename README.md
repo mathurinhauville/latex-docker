@@ -38,7 +38,7 @@ make start
 ## Custom dependencies
 You can edit the Dockerfile.custom to add other tlmgr packages.
 
-The Dockerfile use image from [blang/latex](https://hub.docker.com/r/blang/latex) and add custom dependencies. Initially, the tag is set to `ctanfull`and provide a large amount of packages (3.07GB). You can change the tag to `ctanbasic` (210.18 MB) if you want to reduce the image size and customize as you want.
+The Dockerfile use image from [blang/latex](https://hub.docker.com/r/blang/latex) and add custom dependencies. Initially, the tag is set to `ctanfull`and provide a large amount of packages but heavy (3.07GB). If you want to reduce the image size and customize as you want, you can change the tag to `ctanbasic` (210.18 MB).
 
 ## Make commands
 
