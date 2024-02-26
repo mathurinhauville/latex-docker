@@ -10,3 +10,6 @@
 *.fdb_latexmk
 *.out
 *.toc
+*.ist
+*.acn
+*.glo
