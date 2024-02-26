@@ -1,0 +1,4 @@
+FROM blang/latex:ctanfull
+
+# Install dependencies
+# ex : RUN tlmgr install <package>
