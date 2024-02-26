@@ -2,6 +2,10 @@
 
 Compile .tex files in a Docker container with custom dependencies.
 
+Inspire from this [project](https://github.com/blang/latex-docker)
+by [blang](https://github.com/blang)
+and his docker image [blang/latex](https://hub.docker.com/r/blang/latex).
+
 ## Usage
 
 ```bash
