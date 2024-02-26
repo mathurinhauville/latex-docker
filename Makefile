@@ -13,7 +13,7 @@ build:
 	@docker build -t $(IMAGE) -f Dockerfile.custom .
 
 start:
-	@docker run -d --name $(CONTAINER) --user=$(id -u):$(id -g) --net=none -t -v $(PWD):/data $(IMAGE) /bin/sh -c "sleep infinity"
+	@docker run -d --name $(CONTAINER) --user=$(id -u):$(id -g) --net=none -t -v .:/data $(IMAGE) /bin/sh -c "sleep infinity"
 
 stop : 
 	@docker stop $(CONTAINER)
@@ -24,7 +24,7 @@ restart: stop start
 shell:
 	@docker exec -it $(CONTAINER) /bin/sh
 
-########### Latex ###########
+########### LateX ###########
 
 comp:
 	@if [ -z "$(f)" ]; then \
