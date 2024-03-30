@@ -2,7 +2,9 @@
 
 IMAGE=blang/latex:ctanfull
 CONTAINER=latex
+
 MAIN_FILE=main.tex
+PDF_OUTPUT=main.pdf
 
 .PHONY: build start stop restart shell compile_arg comp clean
 .DEFAULT_GOAL := comp
@@ -28,9 +30,14 @@ shell:
 
 comp:
 	@if [ -z "$(f)" ]; then \
-		$f=$(MAIN_FILE); \
+		f=$(MAIN_FILE); \
 	fi; \
 	docker exec -it $(CONTAINER) /bin/sh -c "latexmk -cd -f -interaction=batchmode -pdf $(f)"
+	@make preview
 
 clean:
 	@docker exec -it $(CONTAINER) /bin/sh -c "latexmk -cd -C"
+	@rm *.cpt
+
+preview:
+	@open -a "Preview" $(PDF_OUTPUT)
