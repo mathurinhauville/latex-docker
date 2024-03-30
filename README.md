@@ -49,5 +49,6 @@ The Dockerfile use image from [blang/latex](https://hub.docker.com/r/blang/latex
 - `make build`: Build the Docker image
 - `make start`: Start the Docker container
 - `make stop`: Stop the Docker container
-- `make comp <f=texfile>`: Compile the .tex file. By default, the .tex file is `main.tex`
+- `make comp <f=texfile>`: Compile the .tex file. By default, the .tex file is `main.tex` and display the pdf file.
 - `make clean`: Remove the generated files
+- `make preview`: Preview the generated PDF file
