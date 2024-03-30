@@ -6,7 +6,7 @@ CONTAINER=latex
 MAIN_FILE=main.tex
 PDF_OUTPUT=main.pdf
 
-.PHONY: build start stop restart shell compile_arg comp clean
+.PHONY: build start stop restart shell clean preview
 .DEFAULT_GOAL := comp
 
 ########### Docker ###########
